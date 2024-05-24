@@ -410,7 +410,24 @@ gsap.from("#contactme div", {
 
     },
 });
-
+// let fix=document.querySelector('.fix')
+// gsap.fromTo(
+//     ".fix",
+//     {
+//     // boxShadow:" rgba(255, 124, 2, 0.2) 0px 30px 20px -12px inset, rgba(242, 117, 0, 0.2) 0px 18px 20px -18px inset"
+//     // boxShadow:"2px 10px 500px orange"
+        
+//     },
+//     {
+//         scrollTrigger: {
+//             trigger: ".wrap",
+//             scrub: true,
+//             markers:true,
+//         },
+//         // backgroundColor: "orange",
+//         // color:'white'
+//     }
+// );
 var cursor = document.querySelector(".cursor");
 var curparent = document.querySelector("#home");
 var nav_bar = document.querySelector(".nav_bar");
