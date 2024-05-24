@@ -223,7 +223,7 @@ document.querySelector("#tail").addEventListener("mouseleave", () => {
 
 //c
 document.querySelector("#c").addEventListener("mouseover", () => {
-    cursor.innerHTML = "C";
+    cursor.innerHTML = "C++";
     skillval.textContent = 0;
     percentage = setInterval(c, 30);
 });
