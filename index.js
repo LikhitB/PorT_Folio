@@ -62,6 +62,7 @@ function react() {
 }
 //react
 document.querySelector("#react").addEventListener("mouseover", () => {
+    cursor.innerHTML = 'React'
     skillval.textContent = 0;
     percentage = setInterval(react, 30);
 });
@@ -144,6 +145,8 @@ function ts() {
 
 // git
 document.querySelector("#git").addEventListener("mouseover", () => {
+    cursor.innerHTML = "GIT";
+
     skillval.textContent = 0;
     percentage = setInterval(git, 30);
 });
@@ -153,6 +156,8 @@ document.querySelector("#git").addEventListener("mouseleave", () => {
 });
 //github
 document.querySelector("#github").addEventListener("mouseover", () => {
+    cursor.innerHTML = "GitHub";
+
     skillval.textContent = 0;
     percentage = setInterval(github, 30);
 });
@@ -162,6 +167,8 @@ document.querySelector("#github").addEventListener("mouseleave", () => {
 });
 //ts
 document.querySelector("#ts").addEventListener("mouseover", () => {
+    cursor.innerHTML = "TypeScript";
+
     skillval.textContent = 0;
     percentage = setInterval(ts, 30);
 });
@@ -171,6 +178,8 @@ document.querySelector("#ts").addEventListener("mouseleave", () => {
 });
 // gsap
 document.querySelector("#gsap").addEventListener("mouseover", () => {
+    cursor.innerHTML = "GSAP";
+
     skillval.textContent = 0;
     percentage = setInterval(gsp, 30);
 });
@@ -180,6 +189,8 @@ document.querySelector("#gsap").addEventListener("mouseleave", () => {
 });
 //js
 document.querySelector("#js").addEventListener("mouseover", () => {
+    cursor.innerHTML = "JavaScript";
+
     skillval.textContent = 0;
     percentage = setInterval(js, 30);
 });
@@ -189,6 +200,8 @@ document.querySelector("#js").addEventListener("mouseleave", () => {
 });
 //css
 document.querySelector("#css").addEventListener("mouseover", () => {
+    cursor.innerHTML = "CSS";
+
     skillval.textContent = 0;
     percentage = setInterval(css, 30);
 });
@@ -198,6 +211,8 @@ document.querySelector("#css").addEventListener("mouseleave", () => {
 });
 //tailwind
 document.querySelector("#tail").addEventListener("mouseover", () => {
+    cursor.innerHTML = "TailwindCSS";
+
     skillval.textContent = 0;
     percentage = setInterval(tail, 30);
 });
@@ -208,6 +223,7 @@ document.querySelector("#tail").addEventListener("mouseleave", () => {
 
 //c
 document.querySelector("#c").addEventListener("mouseover", () => {
+    cursor.innerHTML = "C";
     skillval.textContent = 0;
     percentage = setInterval(c, 30);
 });
@@ -217,6 +233,8 @@ document.querySelector("#c").addEventListener("mouseleave", () => {
 });
 //python
 document.querySelector("#py").addEventListener("mouseover", () => {
+    cursor.innerHTML = "PYTHON";
+
     skillval.textContent = 0;
     percentage = setInterval(py, 30);
 });
@@ -226,6 +244,7 @@ document.querySelector("#py").addEventListener("mouseleave", () => {
 });
 //html
 document.querySelector("#html").addEventListener("mouseover", () => {
+    cursor.innerHTML = "HTML";
     skillval.textContent = 0;
     percentage = setInterval(html, 30);
 });
@@ -235,6 +254,7 @@ document.querySelector("#html").addEventListener("mouseleave", () => {
 });
 //java
 document.querySelector("#java").addEventListener("mouseover", () => {
+    cursor.innerHTML = "JAVA";
     skillval.textContent = 0;
     percentage = setInterval(java, 30);
 });
@@ -396,6 +416,8 @@ var curparent = document.querySelector("#home");
 var nav_bar = document.querySelector(".nav_bar");
 var skills = document.querySelector("#skills");
 setTimeout(() => {
+    cursor.innerHTML.style.fontSize = '2rem'
+
     cursor.classList.remove("not_active");
 }, 2500);
 curparent.addEventListener("mousemove", (event) => {
@@ -435,46 +457,46 @@ document.querySelector("#projects").addEventListener("mouseleave", () => {
         scale: 0,
     });
 });
-gsap.from(".pro_ani",{
-    opacity:0,
-    duration:0.3,
-    scrollTrigger:{
-        trigger:".pro_ani div",
-        start:"top 60%",
-        end:"bottom 100%",
-        scrub:2
+gsap.from(".pro_ani", {
+    opacity: 0,
+    duration: 0.3,
+    scrollTrigger: {
+        trigger: ".pro_ani div",
+        start: "top 60%",
+        end: "bottom 100%",
+        scrub: 2
 
     }
 })
-gsap.from(".pro_ani1",{
-    opacity:0,
-    duration:0.3,
-    scrollTrigger:{
-        trigger:".pro_ani1 div",
-        start:"top 60%",
-        end:"bottom 100%",
-        scrub:2
+gsap.from(".pro_ani1", {
+    opacity: 0,
+    duration: 0.3,
+    scrollTrigger: {
+        trigger: ".pro_ani1 div",
+        start: "top 60%",
+        end: "bottom 100%",
+        scrub: 2
 
     }
 })
-gsap.from(".pro_ani2",{
-    duration:0.3,
-    opacity:0,
-    scrollTrigger:{
-        trigger:".pro_ani2 div",
-        start:"top 60%",
-        end:"bottom 100%",
-        scrub:2,
+gsap.from(".pro_ani2", {
+    duration: 0.3,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".pro_ani2 div",
+        start: "top 60%",
+        end: "bottom 100%",
+        scrub: 2,
     }
 })
-gsap.from(".pro_ani3",{
-    opacity:0,
-    duration:0.3,
-    scrollTrigger:{
-        trigger:".pro_ani3 div",
-        start:"top 60%",
-        end:"bottom 100%",
-        scrub:2
+gsap.from(".pro_ani3", {
+    opacity: 0,
+    duration: 0.3,
+    scrollTrigger: {
+        trigger: ".pro_ani3 div",
+        start: "top 60%",
+        end: "bottom 100%",
+        scrub: 2
 
     }
 })
@@ -494,7 +516,6 @@ document.querySelector("#last_nav").addEventListener("mouseleave", () => {
 
 let per_sec = document.querySelector("#skills");
 per_sec.addEventListener("mouseover", () => {
-    cursor.innerHTML = "Check Skill %";
     gsap.to(cursor, {
         duration: 0.5,
         scale: 5,
