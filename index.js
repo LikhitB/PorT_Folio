@@ -62,7 +62,7 @@ function react() {
 }
 //react
 document.querySelector("#react").addEventListener("mouseover", () => {
-    cursor.innerHTML = 'React'
+    cursor.innerHTML = 'React';
     skillval.textContent = 0;
     percentage = setInterval(react, 30);
 });
@@ -190,8 +190,7 @@ document.querySelector("#gsap").addEventListener("mouseleave", () => {
 //js
 document.querySelector("#js").addEventListener("mouseover", () => {
     cursor.innerHTML = "JavaScript";
-
-    skillval.textContent = 0;
+        skillval.textContent = 0;
     percentage = setInterval(js, 30);
 });
 document.querySelector("#js").addEventListener("mouseleave", () => {
@@ -381,21 +380,21 @@ gsap.from(".skill h1", {
         pin: true,
     },
 });
-gsap.fromTo(
-    ".wrap",
-    {
-        backgroundColor: "white",
-    },
-    {
-        scrollTrigger: {
-            trigger: ".wrap",
-            scrub: true,
-            end: "bottom bottom",
-            start: "-top 100% -top 200%",
-        },
-        backgroundColor: "rgb(254 215 170)",
-    }
-);
+// gsap.fromTo(
+//     ".wrap",
+//     {
+//         backgroundColor: "white",
+//     },
+//     {
+//         scrollTrigger: {
+//             trigger: ".wrap",
+//             scrub: true,
+//             end: "bottom bottom",
+//             start: "-top 100% -top 200%",
+//         },
+//         backgroundColor: "rgb(254 215 170)",
+//     }
+// );
 
 gsap.from("#contactme div", {
     scale: 0,
@@ -433,39 +432,37 @@ var curparent = document.querySelector("#home");
 var nav_bar = document.querySelector(".nav_bar");
 var skills = document.querySelector("#skills");
 setTimeout(() => {
-    cursor.innerHTML.style.fontSize = '2rem'
 
     cursor.classList.remove("not_active");
 }, 2500);
 curparent.addEventListener("mousemove", (event) => {
     gsap.to(cursor, {
         duration: 1,
-        x: event.x,
-        y: event.y,
+        x: event.x+50,
+        y: event.y-50,
         duration: 1.5,
         ease: "elastic.out",
     });
 });
-
 nav_bar.addEventListener("mousemove", () => {
     gsap.to(cursor, {
         duration: 1,
         scale: 5,
-        boxShadow: " 2px 10px 500px orange",
+        boxShadow: " 2px 25px 50px 25px  rgb(249 115 22)",
     });
 });
 nav_bar.addEventListener("mouseleave", () => {
     gsap.to(cursor, {
         duration: 1,
-        scale: 1,
+        scale: 0,
     });
 });
 //project animation
 document.querySelector("#projects").addEventListener("mouseover", () => {
     gsap.to(cursor, {
         duration: 1,
-        scale: 5,
-        boxShadow: "2px 10px 500px white inset",
+        scale: 25,
+        boxShadow: "2px 2px 250px 5px rgb(249 115 22 0.5) inset",
     });
 });
 document.querySelector("#projects").addEventListener("mouseleave", () => {
@@ -534,10 +531,8 @@ document.querySelector("#last_nav").addEventListener("mouseleave", () => {
 let per_sec = document.querySelector("#skills");
 per_sec.addEventListener("mouseover", () => {
     gsap.to(cursor, {
-        duration: 0.5,
-        scale: 5,
-        fontSize: "4px",
-        boxShadow: "0px 0px 500px orange",
+        duration: 2,
+        scale: 1,
     });
 });
 per_sec.addEventListener("mouseleave", () => {

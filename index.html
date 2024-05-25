@@ -10,10 +10,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+              content-visibility: auto;
+            }
+          }
 
- 
-body{
+        body{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    @apply bg-black;
+    cursor:pointer
 }
 * {
     margin: 0;
@@ -28,7 +34,7 @@ body{
 }
 .nav a{
     position: relative;
-    @apply pb-2;
+    @apply pb-2
 }
 .animate1::before {
     content: "";
@@ -53,6 +59,7 @@ body{
 @keyframes slide {
     from {
         @apply border-b-2 border-orange-400;
+
         width: 0%
     }
 
@@ -124,6 +131,7 @@ body{
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    @apply bg-orange-500
 }
 .nav-items div a {
     color: black;
@@ -253,24 +261,20 @@ body{
 }
 
 .user-image {
-    filter: grayscale(1);
-    animation: scaleImage 6s linear infinite;
+    animation: scaleImage 4s linear infinite;
 }
 @keyframes scaleImage {
     0% {
-        filter: grayscale(0);
         transform: scale(1);
     }
 
     50% {
-        transform: scale(1.04);
-        filter: grayscale(1);
-        box-shadow: 50px 50px 100px rgb(255, 140, 0);
+        transform: scale(1.01);
+        box-shadow: 10px 5px 600px rgb(159, 88, 0);
     }
 
     100% {
         transform: scale(1);
-        filter: grayscale(0);
     }
 }
 
@@ -321,10 +325,10 @@ body{
     resize: none;
 }
 .form input::placeholder{
-    @apply text-black
+    @apply text-white
 }
 .form textarea::placeholder{
-    @apply text-black
+    @apply text-white
 }
     </style>
 </head>
@@ -336,31 +340,31 @@ body{
     </div>
     <!-- cursor  -->
     <div
-        class="cursor w-10 h-10 rounded-full fixed z-10 not_active text-orange-800 hidden lg:flex justify-center items-center self-center font-extrabold">
+        class="cursor w-2 h-2 rounded-full fixed z-[10] not_active text-orange-400 hidden lg:flex justify-center items-center self-center font-extrabold">
     </div>
     <div class="w-[100%] overflow-hidden flex flex-col gap-40 wrap" id="home">
         <!-- navbarstart  -->
-        <div class="w-[100%] flex flex-col justify-center items-center mt-6 nav_bar gap-10">
+        <div class="w-[100%] flex flex-col justify-center items-center mt-6 gap-10">
             <div
                 class="flex justify-between items-center w-[90vw] md:w-[70vw]  fixed top-7 rounded-xl fix z-[20] px-8 py-2 fix">
                 <!-- logo  -->
                 <a href="#home">
                     <div class="p-1 sm:p-2 clip">
                         <div class="-rotate-45">
-                            <span class="text-orange-600 bl">BL</span>
+                            <span class="text-orange-400 bl">BL</span>
                         </div>
                     </div>
                 </a>
                 <!-- left part  -->
                 <div class="flex gap-8 text-2xl relative z-[11] nav">
                     <div class="md:flex hidden">
-                        <a href="#projects" class="text-orange-800 home font-extrabold">Projects</a>
+                        <a href="#projects" class="text-orange-400 home font-extrabold">Projects</a>
                     </div>
                     <div class="md:flex hidden">
-                        <a href="#skills" class="text-orange-800 about font-extrabold">Skills</a>
+                        <a href="#skills" class="text-orange-400 about font-extrabold">Skills</a>
                     </div>
                     <div class="md:flex hidden">
-                        <a href="#contactme" class="text-orange-800 contact font-extrabold">Contact Me</a>
+                        <a href="#contactme" class="text-orange-400 contact font-extrabold">Contact Me</a>
                     </div>
                     <div class="md:hidden relative">
                         <i class="fa-solid fa-bars text-orange-600" id="menu"></i>
@@ -386,10 +390,10 @@ body{
             </div>
             <!-- navbarends  -->
             <!-- name-section -->
-            <div class="flex flex-col lg:flex-row gap-10 items-center justify-between w-[100vw] sm:w-[80vw] mt-44">
+            <div class="flex flex-col lg:flex-row gap-10 items-center justify-between w-[100vw] sm:w-[80vw] mt-44 ">
                 <!-- leftpart  -->
 
-                <div class="flex flex-col gap-3 sm:gap-7 w-[80%] z-[10]">
+                <div class="flex flex-col gap-3 sm:gap-7 w-[80%] z-[10] nav_bar">
                     <div class="text-xl sm:text-2xl font-extrabold text-orange-600">
                         <span>Hi!</span>
                         <span>I am Likhit Battula, A</span>
@@ -406,16 +410,16 @@ body{
                         </ul>
                     </div>
 
-                    <div class="text-sm sm:text-xl w-[100%] z-10">
+                    <div class="text-sm sm:text-xl w-[100%] z-10 text-gray-900">
                         <h1 class="text-align" id="hider">
                             I am currently looking for internships on React
                             based or any frontend based.I can create the
-                            basic to intermediate level we-bsites. I am also
+                            basic to intermediate level websites. I am also
                             adaptive learner and the one who likes the
                             tecnologies.I have also did the basic level of
                             problem solving on core concepts like Recursion,
-                            Arrays, Lin-ked Lists,low level stack and graphs
-                            pro-blems.
+                            Arrays, Linked Lists,low level stack and graphs
+                            problems.
                             <button class="text-orange-600 font-extrabold text-base" id="readl">
                                 Read Less
                             </button>
@@ -426,7 +430,7 @@ body{
                     </div>
 
                     <a href="https://www.linkedin.com/in/battula-likhit/"
-                        class="flex self-center items-center justify-center w-[100%] md:w-[50%] border border-yellow-200 group z-[11]">
+                        class="flex self-center items-center justify-center w-[100%] md:w-[50%] group z-[11]">
                         <div class="btn-pink bg-orange-600 w-[100%] flex self-center items-center justify-center font-bold p-2 text-orange-200 hover:text-orange-600"
                             id="btn">
                             <span class="text-sm sm:text-xl">Profile</span>
@@ -583,7 +587,7 @@ body{
                     <h1 class="absolute text-2xl md:text-6xl" id="skillval">Hover/Click Icons check%</h1>
                 </div>
                 <div
-                    class="grid grid-cols-3 overflow-hidden w-[90vw] sm:w-[70vw] justify-items-center items-center gap-8 h-auto skillimg">
+                    class="grid grid-cols-3 overflow-hidden w-[90vw] sm:w-[70vw] justify-items-center items-center gap-20 h-auto skillimg">
                     <img src="assets/c-.png" alt="" id="c" />
                     <img src="assets/python.png" alt="" id="py" />
                     <img src="assets/java.png" alt="" id="java" />
@@ -617,7 +621,7 @@ body{
                     <textarea type="text" id="suggest" placeholder="Suggest,Comment,Message..." class="h-44 p-2"
                         name="data[suggest]"></textarea>
                     <a
-                        class="btn-pink text-orange-600 group rounded-md bg-orange-600 w-[100%] md:w-[50%] flex justify-center items-center p-2">
+                        class="btn-pink group rounded-md bg-orange-600 w-[100%] md:w-[50%] flex justify-center items-center p-2 text-black">
                         <button type="submit" class="text-base sm:text-xl">
                             Send Message
                         </button>
