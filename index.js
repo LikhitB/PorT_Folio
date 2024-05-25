@@ -380,21 +380,6 @@ gsap.from(".skill h1", {
         pin: true,
     },
 });
-// gsap.fromTo(
-//     ".wrap",
-//     {
-//         backgroundColor: "white",
-//     },
-//     {
-//         scrollTrigger: {
-//             trigger: ".wrap",
-//             scrub: true,
-//             end: "bottom bottom",
-//             start: "-top 100% -top 200%",
-//         },
-//         backgroundColor: "rgb(254 215 170)",
-//     }
-// );
 
 gsap.from("#contactme div", {
     scale: 0,
